@@ -18,7 +18,7 @@ class ChartMakeCommand extends GeneratorCommand
         'Bar Chart' => 'BarChart',
         'Horizontal Bar Chart' => 'HorizontalBarChart',
         'Heatmap Chart' => 'HeatMapChart',
-        'Radar Chart' => 'RadarChart',
+        'Radar Chart' => 'RadarChart'
     ];
 
     protected $selectedChart;
@@ -27,7 +27,7 @@ class ChartMakeCommand extends GeneratorCommand
     {
         $option = $this->choice(
             'Select a chart type',
-            array_keys($this->chartTypes),
+            array_keys($this->chartTypes)
         );
         $this->selectedChart = $this->chartTypes[$option];
     }
@@ -127,7 +127,7 @@ class ChartMakeCommand extends GeneratorCommand
     {
         return [
             ['vue', 'vue', InputOption::VALUE_NONE, 'Creates a chart class for a vue component.'],
-            ['json', 'json', InputOption::VALUE_NONE, 'Creates a chart class for a json API response.'],
+            ['json', 'json', InputOption::VALUE_NONE, 'Creates a chart class for a json API response.']
         ];
     }
 }
